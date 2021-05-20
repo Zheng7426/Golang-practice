@@ -11,8 +11,15 @@ func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
 
-	//message, err := greetings.Hey("荷马")
-	message, err := greetings.Hey("")
+	names := []string{
+		"荷马",
+		"曾子",
+		"庄生",
+		"苏格拉底",
+	}
+
+	message, err := greetings.Heys(names)
+	//message, err := greetings.Hey("")
 	
 	if err != nil {
 		log.Fatal(err)
